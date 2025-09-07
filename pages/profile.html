@@ -1,19 +1,51 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <link rel="stylesheet" href="style.css">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
+
 <body>
-     <iframe src="../components/ui/header.html" frameborder="0"></iframe>
-    <div>
+    <div id="header"></div>
+    <div id="noAccount">
         <p>
-            Sie haben kein Konto,<a href="sign-in.html">melden </a> sie sich nicht an oder <a href="sign-up.html">registrieren</a> sie
+            Sie haben kein Konto,<a href="sign-in.html">melden </a> sie sich nicht an oder <a
+                href="sign-up.html">registrieren</a> sie
         </p>
     </div>
-<script src="script.js">
-</script>
+    <div id="iHaveAccount">
+        <a href="#open">
+            <div class="PFPModel" id="PFP"></div>
+        </a>
+    <div class="Model" id="open">
+        <div class="Model-content">
+            <a class="close" href="#close">&times;</a>
+            <ul>
+                <li>
+                    <img class="PFP" src="https://images.gutefrage.net/media/fragen/bilder/woher-bekommt-man-diese-profilbilder/0_big.jpg?v=1614986045806" alt="">
+                </li>
+                <li>
+                    <img class="PFP" src="https://www.ntower.de/upload_bilder/SplatoonAvatare/Splatoon_Green.png" alt="">
+                </li>
+                <li>
+                    <img class="PFP" src="https://www.kindersache.de/sites/default/files/styles/profile_picture/public/generated-profile-pictures/2021-03/233967.png?itok=-TIe1ed2" alt="">
+                </li>
+            </ul>
+                
+            
+        </div>
+    </div>
+    <h1 id="name">
+        your name
+    </h1>
+    </div>
+    
+    <script type="module" src="script.js"></script>
+    <script type="module" src="headerImper.js"></script>
+    <script type="module" src="profiel.js"></script>
 </body>
+
 </html>

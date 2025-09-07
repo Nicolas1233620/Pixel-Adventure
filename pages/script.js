@@ -1,8 +1,13 @@
 import { createUserWithEmailAndPassword,signInWithEmailAndPassword, updateProfile } from "https://www.gstatic.com/firebasejs/10.14.1/firebase-auth.js";
 import { auth } from "../app/firebase.js";
 
-document.getElementById("signIn").onclick = () => setUser(signInWithEmailAndPassword,false)
-document.getElementById('signUp').onclick = () => setUser(createUserWithEmailAndPassword,true)
+let signIn = document.getElementById("signIn")
+let signUp = document.getElementById("signUp")
+
+if(signIn){
+    document.getElementById("signIn").onclick = () => setUser(signInWithEmailAndPassword,false)
+}else document.getElementById('signUp').onclick = () => setUser(createUserWithEmailAndPassword,true)
+
 function setUser(fn,isSingUp) {
     let name;
     isSingUp?name = document.getElementById("name").value:""
@@ -20,10 +25,10 @@ function setUser(fn,isSingUp) {
                     displayName: name
                 })
             }
-            localStorage.setItem("user",JSON.stringify(user))
+            localStorage.setItem("user",JSON.stringify(auth.currentUser))
             // Signed up 
             console.log(userCredential)
-            // ...
+            console.log(auth.currentUser)
         })
         .catch((error) => {
             console.log(error);
