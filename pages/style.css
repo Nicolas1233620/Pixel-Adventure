@@ -80,3 +80,7 @@ border-radius: 4px;
 .Model-content ul{
     list-style: none;
 }
+#photo{
+    height:225px ;
+    width:225px ;
+}

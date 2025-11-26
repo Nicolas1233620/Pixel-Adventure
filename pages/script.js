@@ -18,8 +18,6 @@ function setUser(fn,isSingUp) {
     fn(auth, email, password)
         .then((userCredential) => {
             const user = userCredential.user;
-            
-
             if (name) {
                 updateProfile(user, {
                     displayName: name
@@ -38,5 +36,3 @@ function setUser(fn,isSingUp) {
             // ..
         });
 }
-
-
